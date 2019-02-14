@@ -1,4 +1,5 @@
 import org.flywaydb.gradle.task.FlywayMigrateTask
+
 buildscript {
     ext {
         springBootVersion = "2.0.6.RELEASE"
@@ -63,7 +64,6 @@ flyway {
     password = ""
     locations = ["filesystem:databases/tracker/migrations"]
 }
-
 
 task testMigrate(type: FlywayMigrateTask) {
     url = testDbUrl
